@@ -5,13 +5,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,13 +18,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.uthsmarttasks.ButtonScreen
 import com.example.uthsmarttasks.Header
 import com.example.uthsmarttasks.R
 
 @Composable
-fun FirstScreen(navController: NavHostController) {
+fun ThirdScreen(navController: NavHostController) {
     Column {
-        Header(1)
+        Header(3)
         Box(
             modifier = Modifier
                 .background(Color.White),
@@ -40,20 +36,20 @@ fun FirstScreen(navController: NavHostController) {
                 verticalArrangement = Arrangement.Center
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.screen1),
+                    painter = painterResource(id = R.drawable.logo3),
                     contentDescription = "Centered Image",
                     modifier = Modifier
                         .size(400.dp)
                         .padding(25.dp)
                 )
                 Text(
-                    text = "Easy Time Management",
+                    text = "Reminder Notification",
                     fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
                 Text(
-                    text = "With management based on priority and daily tasks, it will give you convenience in managing and determining the tasks that must be done first ",
+                    text = "The advantage of this application is that it also provides reminders for you so you don't forget to keep doing your assignments well and according to the time you have set",
                     fontSize = 20.sp,
                     color = Color.Gray,
                     textAlign = TextAlign.Center,
@@ -61,27 +57,6 @@ fun FirstScreen(navController: NavHostController) {
                 )
             }
         }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.White)
-        ) {
-            Button(
-                onClick = { navController.navigate("second") },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF42AFFF),
-                    contentColor = Color.White
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 25.dp, end = 25.dp, top = 165.dp)
-                    .height(50.dp)
-            ) {
-                Text(
-                    text = "Next",
-                    fontSize = 20.sp
-                )
-            }
-        }
+        ButtonScreen(navController = navController, route = "last", textButton1 = "Get Started")// mai fix
     }
 }
