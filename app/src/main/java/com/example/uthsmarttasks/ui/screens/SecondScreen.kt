@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.uthsmarttasks.ButtonScreen
+import com.example.uthsmarttasks.Footer
 import com.example.uthsmarttasks.Header
 import com.example.uthsmarttasks.R
 
@@ -57,6 +57,7 @@ fun SecondScreen(navController: NavHostController){
                 )
             }
         }
-        ButtonScreen(navController = navController, route = "third", "Next")
+//        ButtonScreen(navController = navController, "third", "Next")
+        Footer(navController = navController, "third", "Next", showBackButton = true)
     }
 }

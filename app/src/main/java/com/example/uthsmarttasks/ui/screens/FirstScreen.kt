@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.uthsmarttasks.Footer
 import com.example.uthsmarttasks.Header
 import com.example.uthsmarttasks.R
 
@@ -61,27 +62,29 @@ fun FirstScreen(navController: NavHostController) {
                 )
             }
         }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color.White)
-        ) {
-            Button(
-                onClick = { navController.navigate("second") },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF42AFFF),
-                    contentColor = Color.White
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 25.dp, end = 25.dp, top = 165.dp)
-                    .height(50.dp)
-            ) {
-                Text(
-                    text = "Next",
-                    fontSize = 20.sp
-                )
-            }
-        }
+//        Box(
+//            modifier = Modifier
+//                .fillMaxSize()
+//                .background(Color.White)
+//        ) {
+//            Button(
+//                onClick = { navController.navigate("second") },
+//                colors = ButtonDefaults.buttonColors(
+//                    containerColor = Color(0xFF42AFFF),
+//                    contentColor = Color.White
+//                ),
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .padding(start = 25.dp,bottom = 37.dp, end = 25.dp, top = 160.dp)
+//                    .height(50.dp)
+//            ) {
+//                Text(
+//                    text = "Next",
+//                    fontSize = 25.sp
+//                )
+//            }
+//        }
+
+        Footer(navController = navController, "second", "Next", showBackButton = false)
     }
 }
